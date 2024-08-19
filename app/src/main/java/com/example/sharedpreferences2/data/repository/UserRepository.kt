@@ -24,7 +24,7 @@ class UserRepository(context: Context) {
     //Atributro de referencia ao dATAstore do conmtext
     private val dataStore = context.dataStore
 
-    val usernameFlow: Flow<String> = dataStore
+    val usernameFlow: Flow<String?> = dataStore
         .data.catch{expection ->
             if (expection is IOException){
                 emit(emptyPreferences())
@@ -32,8 +32,8 @@ class UserRepository(context: Context) {
             }else{
                throw expection
             }
-        }
-        .map {  it.get(ATTR_USERNAME)
+        }.map {
+            it.get(ATTR_USERNAME)
         }
     suspend fun saveUserame(username: String){
         dataStore.edit{

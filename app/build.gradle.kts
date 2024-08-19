@@ -53,8 +53,8 @@ dependencies {
 
     implementation("androidx.lifecycle:lifecycle-viewmodel-android:2.8.4")
 
-    implementation("org.jetbrains.kotlinx:kotlin-coroutines-core:1.7.1")
-    implementation("org.jetbrains.kotlinx:kotlin-coroutines-android:1.7.1")
+    //implementation("org.jetbrains.kotlinx:kotlin-coroutines-core:1.7.1")
+    //implementation("org.jetbrains.kotlinx:kotlin-coroutines-android:1.7.1")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
